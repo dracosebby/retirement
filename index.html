@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retirement Plan Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Retirement Plan Calculator</h2>
+        <form id="retirement-form">
+            <label for="current-age">Current Age:</label>
+            <input type="range" id="current-age" min="18" max="65" value="30" oninput="updateInput(this.value, 'current-age-output')">
+            <span id="current-age-output">30</span>
+
+            <label for="retirement-age">Desired Retirement Age:</label>
+            <input type="range" id="retirement-age" min="50" max="75" value="65" oninput="updateInput(this.value, 'retirement-age-output')">
+            <span id="retirement-age-output">65</span>
+
+            <label for="current-income">Current Annual Income ($):</label>
+            <input type="number" id="current-income">
+
+            <label for="desired-retirement-savings">Desired Retirement Savings ($):</label>
+            <input type="number" id="desired-retirement-savings">
+
+            <label for="current-investments">Current Investments ($):</label>
+            <input type="number" id="current-investments">
+
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    
+    <script src="script.js"></script>
+
+
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modal-text"></p>
+    </div>
+</div>
+
+
+</body>
+</html>
